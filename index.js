@@ -1,17 +1,26 @@
-const inquirer = require('inquirer')
-const chalk = require('chalk')
+const chalk = require('chalk');
 
-inquirer
-    .prompt([
-      { name: 'nome', message: 'Qual o seu nome?' },
-      { name: 'idade', message: 'Qual a sua idade?' },
-    ])
+const nota = 10;
 
-    .then((answers) => {
-        const response = `O nome do usuário é ${answers.nome} e ele tem ${answers.idade}`
-        console.log(chalk.bgYellow.black(response))
-    })
+if (nota >= 7) {
+  console.log(chalk.green('Aprovado'));
+} else {
+  console.log(chalk.red('Reprovado'))
+}
 
-    .catch((err) => {
-    console.log(err)
-  })
+// const inquirer = require('inquirer')
+
+// inquirer
+//     .prompt([
+//       { name: 'nome', message: 'Qual o seu nome?' },
+//       { name: 'idade', message: 'Qual a sua idade?' },
+//     ])
+
+//     .then((answers) => {
+//         const response = `O nome do usuário é ${answers.nome} e ele tem ${answers.idade}`
+//         console.log(chalk.bgYellow.black(response))
+//     })
+
+//     .catch((err) => {
+//     console.log(err)
+//   })
